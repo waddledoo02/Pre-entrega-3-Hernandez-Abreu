@@ -1,0 +1,337 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font-family: 'Roboto', sans-serif; */
+/* 'Roboto', sans-serif'Roboto', sans-serif; */
+header {
+  padding: 20px;
+  background-color: rgb(201, 85, 9);
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  text-shadow: 0 0 5px black, 0 0 5px black;
+  font-weight: bold;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  background-image: url(imagenes/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+main .call {
+  height: 100vh;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.726);
+  font-family: "Oswald", sans-serif;
+  padding: 20px;
+  overflow: scroll;
+  position: relative;
+}
+main .call p {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 20px;
+}
+main .call a {
+  text-decoration: none;
+  background-color: rgb(201, 85, 9);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+main .call::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.726);
+  transform: translateX(-10px);
+  /* Ajusta la posición inicial de la sombra */
+  z-index: -1;
+}
+main .row {
+  width: 100vw;
+  display: grid;
+  grid-gap: 10px;
+  padding: 20px;
+}
+main .botonEnvio {
+  display: block;
+  width: 100px;
+  height: 50px;
+  background-color: darkgrey;
+  background-size: cover;
+  border-radius: 5px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: black;
+}
+
+.seccion {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: rgb(201, 85, 9);
+  padding: 15px;
+  font-family: "Oswald", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(8, 200px);
+  padding: 20px;
+  grid-gap: 15px;
+  overflow: auto;
+}
+.container .item {
+  position: relative;
+  border: 3px solid #411d08;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.9s;
+}
+.container .item:hover {
+  transform: scale(1.09);
+  transition: all 0.9s;
+}
+.container .item:before {
+  content: attr(data-text);
+  /* El texto a mostrar */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo semi-transparente */
+  color: white;
+  /* Color del texto */
+  font-size: 20px;
+  /* Tamaño del texto */
+  font-weight: bold;
+  /* Grosor del texto */
+  display: none;
+  /* Ocultar el texto por defecto */
+  padding: 10px;
+  /* Espacio alrededor del texto */
+  box-sizing: border-box;
+}
+.container .item:hover::before {
+  display: block;
+  /* Mostrar el texto al interactuar con :hover */
+}
+.container .item1 {
+  background-image: url(imagenes/cachito.jpg);
+  /* grid-column: 1/2;
+  grid-row: 1/3;*/
+}
+.container .item2 {
+  background-image: url(imagenes/cafe.jpg);
+  /* grid-column: 2/3;
+  grid-row: 1/2; */
+}
+.container .item3 {
+  background-image: url(imagenes/jugo.jpg);
+  /*  grid-column: 3/5;
+  grid-row: 1/2; */
+}
+.container .item4 {
+  background-image: url(imagenes/pjamon.jpg);
+  /*  grid-column: 2/3;
+  grid-row: 2/4; */
+}
+.container .item5 {
+  background-image: url(imagenes/pqueso.jpg);
+  /* grid-column: 3/4;
+  grid-row: 2/3; */
+}
+.container .item6 {
+  background-image: url(imagenes/tequeños.jpg);
+  /*  grid-column: 4/5;
+  grid-row: 2/3; */
+}
+.container .item7 {
+  background-image: url(imagenes/malta.jpg);
+  /*  grid-column: 1/2;
+  grid-row: 3/4; */
+}
+.container .item8 {
+  background-image: url(imagenes/pastelito.jpg);
+  /* grid-column: 3/5;
+  grid-row: 3/4; */
+}
+
+h2 {
+  text-align: center;
+  background-color: black;
+  color: rgb(201, 85, 9);
+  padding: 15px;
+  font-family: "Oswald", sans-serif;
+}
+
+.nosotros {
+  width: 100%;
+  height: 350px;
+  display: inline;
+}
+.nosotros .nleft {
+  height: 350px;
+  width: 100%;
+  background-image: url(imagenes/cachito.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.nosotros .nright {
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(201, 85, 9);
+}
+.nosotros .nright h3 {
+  color: white;
+  text-shadow: 0 0 5px black;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+}
+.nosotros .nright p {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.nosotros .nright a {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  font-weight: bolder;
+  border-radius: 5px;
+}
+.nosotros .nright a:hover {
+  color: black;
+  transition: 0.09s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 10vw;
+  background-color: rgb(201, 85, 9);
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+footer p {
+  margin-bottom: 20px;
+  font-family: "Oswald", sans-serif;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-delay: 3s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+footer a {
+  color: rgb(201, 85, 9);
+  font-size: 30px;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 200px);
+  }
+  .nosotros {
+    display: flex;
+  }
+  .nleft {
+    width: 50%;
+  }
+  .nright {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .row {
+    display: block;
+    justify-content: center;
+  }
+  .item1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .item2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .item3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .item4 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+  }
+  .item5 {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  .item6 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+  }
+  .item7 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .item8 {
+    grid-column: 2/4;
+    grid-row: 4/5;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px 200px;
+  }
+  .row {
+    display: block;
+    justify-content: center;
+  }
+  .botonEnvio {
+    margin-left: 0;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */
